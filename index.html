@@ -8,53 +8,59 @@
 </head>
 <body>
 
-    <!-- MAIN SCREEN -->
-    <div id="mainScreen" class="screen active">
-        <h1>Podium MX Master 26</h1>
-        <p>Welcome to the ultimate motocross manager game!</p>
-        <button onclick="showScreen('teamScreen')">Manage Team</button>
-        <button onclick="showScreen('marketScreen')">Market</button>
-        <button onclick="showScreen('raceScreen')">Race</button>
-        <button onclick="showScreen('standingsScreen')">Standings</button>
+    <h1>Podium MX Master 26</h1>
+    <p>Welcome to the ultimate motocross manager game!</p>
+
+    <!-- Tabs -->
+    <div id="tabs">
+        <button id="tabMain" onclick="showScreen('mainScreen')" class="active">Home</button>
+        <button id="tabTeam" onclick="showScreen('teamScreen')">Team</button>
+        <button id="tabMarket" onclick="showScreen('marketScreen')">Market</button>
+        <button id="tabRace" onclick="showScreen('raceScreen')">Race</button>
+        <button id="tabStandings" onclick="showScreen('standingsScreen')">Standings</button>
     </div>
 
-    <!-- TEAM SCREEN -->
-    <div id="teamScreen" class="screen">
-        <h2>Your Team</h2>
-        <div id="teamInfo"></div>
-        <button onclick="showScreen('marketScreen')">Go to Market</button>
-        <button onclick="showScreen('raceScreen')">Go to Race</button>
-    </div>
+    <!-- Screens -->
+    <div id="screens">
 
-    <!-- MARKET SCREEN -->
-    <div id="marketScreen" class="screen">
-        <h2>Market</h2>
-        <div id="marketList"></div>
-        <button onclick="showScreen('teamScreen')">Back to Team</button>
-        <button onclick="showScreen('raceScreen')">Go to Race</button>
-    </div>
+        <!-- Main/Home Screen -->
+        <div id="mainScreen" class="screen active">
+            <h2>Home</h2>
+            <p>Manage your team, compete in races, and climb the standings!</p>
+            <div id="news">
+                <h3>News</h3>
+                <p>Loading...</p>
+            </div>
+        </div>
 
-    <!-- RACE SCREEN -->
-    <div id="raceScreen" class="screen">
-        <h2>Race</h2>
-        <button onclick="runRace()">Run Race</button>
-        <div id="raceResults"></div>
-        <div id="raceRecap"></div>
-        <button onclick="showScreen('teamScreen')">Back to Team</button>
-        <button onclick="showScreen('marketScreen')">Go to Market</button>
-    </div>
+        <!-- Team Management Screen -->
+        <div id="teamScreen" class="screen">
+            <h2>Your Team</h2>
+            <div id="teamInfo"></div>
+            <button onclick="upgradeBike()">Upgrade Bike</button>
+            <button onclick="hireStaff()">Hire Staff</button>
+        </div>
 
-    <!-- STANDINGS SCREEN -->
-    <div id="standingsScreen" class="screen">
-        <h2>Standings</h2>
-        <div id="standingsList"></div>
-        <button onclick="showScreen('mainScreen')">Back to Main</button>
-    </div>
+        <!-- Market Screen -->
+        <div id="marketScreen" class="screen">
+            <h2>Market</h2>
+            <div id="marketList"></div>
+        </div>
 
-    <!-- NEWS SECTION -->
-    <div id="news">
-        <h3>News</h3>
-        <p>Loading...</p>
+        <!-- Race Screen -->
+        <div id="raceScreen" class="screen">
+            <h2>Race</h2>
+            <button onclick="runRace()">Run Race</button>
+            <div id="raceResults"></div>
+            <div id="raceRecap"></div>
+        </div>
+
+        <!-- Standings Screen -->
+        <div id="standingsScreen" class="screen">
+            <h2>Standings</h2>
+            <div id="standingsList"></div>
+        </div>
+
     </div>
 
     <script src="script.js"></script>
