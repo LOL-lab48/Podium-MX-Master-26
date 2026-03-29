@@ -2,27 +2,57 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
     padding: 20px;
-    max-width: 900px;
+    max-width: 1000px;
     margin: auto;
 }
 
 .screen {
     display: none;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
 }
 
 .screen.active {
     display: block;
 }
 
-button {
+#mainScreen button,
+#teamScreen button,
+#marketScreen button,
+#raceScreen button,
+#standingsScreen button {
     margin: 5px;
-    padding: 8px 12px;
+    padding: 10px 15px;
     cursor: pointer;
 }
 
-#teamInfo, #marketList, #standingsList, #news, #raceResults, #raceRecap {
-    margin-bottom: 20px;
-    background: #fff;
+#tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+#tabs button {
+    flex: 1;
+    padding: 10px;
+    background: #0077cc;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+#tabs button.active {
+    background: #005fa3;
+}
+
+#teamInfo, #marketList, #standingsList, #raceResults, #raceRecap, #news {
+    margin-top: 10px;
+    background: #eef;
     padding: 10px;
     border-radius: 5px;
+}
+
+#news {
+    margin-top: 20px;
 }
