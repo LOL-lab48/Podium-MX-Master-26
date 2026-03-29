@@ -1,58 +1,61 @@
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
     background-color: #f4f4f4;
+}
+
+header {
+    background-color: #222;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+nav#tabs {
+    display: flex;
+    background-color: #444;
+}
+
+nav#tabs button {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #444;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+nav#tabs button.active {
+    background-color: #007bff;
+}
+
+nav#tabs button:hover {
+    background-color: #555;
+}
+
+main {
     padding: 20px;
-    max-width: 1000px;
-    margin: auto;
 }
 
 .screen {
     display: none;
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
 }
 
 .screen.active {
     display: block;
 }
 
-#mainScreen button,
-#teamScreen button,
-#marketScreen button,
-#raceScreen button,
-#standingsScreen button {
-    margin: 5px;
-    padding: 10px 15px;
-    cursor: pointer;
+#teamInfo p,
+#marketList p,
+#raceResults p,
+#raceRecap p,
+#standingsList p,
+#newsFeed p {
+    margin: 5px 0;
 }
 
-#tabs {
-    display: flex;
-    gap: 10px;
-    margin-bottom: 15px;
-}
-
-#tabs button {
-    flex: 1;
-    padding: 10px;
-    background: #0077cc;
-    color: white;
-    border: none;
-    border-radius: 5px;
-}
-
-#tabs button.active {
-    background: #005fa3;
-}
-
-#teamInfo, #marketList, #standingsList, #raceResults, #raceRecap, #news {
-    margin-top: 10px;
-    background: #eef;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-#news {
-    margin-top: 20px;
+button {
+    margin: 5px 0;
+    padding: 5px 10px;
 }
