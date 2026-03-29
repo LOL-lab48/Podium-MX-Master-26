@@ -1,68 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Podium MX Master 26</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Podium MX Master 26</title>
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+<header>
     <h1>Podium MX Master 26</h1>
-    <p>Welcome to the ultimate motocross manager game!</p>
+</header>
 
-    <!-- Tabs -->
-    <div id="tabs">
-        <button id="tabMain" onclick="showScreen('mainScreen')" class="active">Home</button>
-        <button id="tabTeam" onclick="showScreen('teamScreen')">Team</button>
-        <button id="tabMarket" onclick="showScreen('marketScreen')">Market</button>
-        <button id="tabRace" onclick="showScreen('raceScreen')">Race</button>
-        <button id="tabStandings" onclick="showScreen('standingsScreen')">Standings</button>
-    </div>
+<nav id="tabs">
+    <button onclick="showScreen('homeScreen')" class="active">Home</button>
+    <button onclick="showScreen('teamScreen')">Team</button>
+    <button onclick="showScreen('marketScreen')">Market</button>
+    <button onclick="showScreen('raceScreen')">Race</button>
+    <button onclick="showScreen('standingsScreen')">Standings</button>
+</nav>
 
-    <!-- Screens -->
-    <div id="screens">
-
-        <!-- Main/Home Screen -->
-        <div id="mainScreen" class="screen active">
-            <h2>Home</h2>
-            <p>Manage your team, compete in races, and climb the standings!</p>
-            <div id="news">
-                <h3>News</h3>
-                <p>Loading...</p>
-            </div>
+<main>
+    <section id="homeScreen" class="screen active">
+        <h2>Home</h2>
+        <div id="newsFeed">
+            <h3>News</h3>
+            <p>Loading...</p>
         </div>
+        <p>Money: $<span id="moneyDisplay">0</span> | Reputation: <span id="repDisplay">0</span></p>
+    </section>
 
-        <!-- Team Management Screen -->
-        <div id="teamScreen" class="screen">
-            <h2>Your Team</h2>
-            <div id="teamInfo"></div>
+    <section id="teamScreen" class="screen">
+        <h2>Your Team</h2>
+        <div id="teamInfo"></div>
+        <div id="teamActions">
             <button onclick="upgradeBike()">Upgrade Bike</button>
             <button onclick="hireStaff()">Hire Staff</button>
         </div>
+    </section>
 
-        <!-- Market Screen -->
-        <div id="marketScreen" class="screen">
-            <h2>Market</h2>
-            <div id="marketList"></div>
-        </div>
+    <section id="marketScreen" class="screen">
+        <h2>Market</h2>
+        <div id="marketList"></div>
+    </section>
 
-        <!-- Race Screen -->
-        <div id="raceScreen" class="screen">
-            <h2>Race</h2>
-            <button onclick="runRace()">Run Race</button>
-            <div id="raceResults"></div>
-            <div id="raceRecap"></div>
-        </div>
+    <section id="raceScreen" class="screen">
+        <h2>Race</h2>
+        <button onclick="runRace()">Run Next Race</button>
+        <div id="raceResults"></div>
+        <div id="raceRecap"></div>
+    </section>
 
-        <!-- Standings Screen -->
-        <div id="standingsScreen" class="screen">
-            <h2>Standings</h2>
-            <div id="standingsList"></div>
-        </div>
+    <section id="standingsScreen" class="screen">
+        <h2>Standings</h2>
+        <div id="standingsList"></div>
+    </section>
+</main>
 
-    </div>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
 </html>
