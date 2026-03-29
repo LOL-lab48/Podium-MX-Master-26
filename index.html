@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MotoCross Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h1>MotoCross Manager</h1>
+
+    <!-- Navigation -->
+    <div id="nav">
+        <button onclick="showScreen('home')">Home</button>
+        <button onclick="showScreen('team')">Team</button>
+        <button onclick="showScreen('market')">Market</button>
+        <button onclick="showScreen('upgrades')">Upgrades</button>
+        <button onclick="showScreen('sponsors')">Sponsors</button>
+        <button onclick="showScreen('race')">Race</button>
+        <button onclick="showScreen('standings')">Standings</button>
+    </div>
+
+    <!-- Screens -->
+    <div id="home" class="screen">
+        <h2>Home</h2>
+        <p id="news">Welcome to your team!</p>
+    </div>
+
+    <div id="team" class="screen hidden">
+        <h2>Your Team</h2>
+        <div id="teamInfo"></div>
+    </div>
+
+    <div id="market" class="screen hidden">
+        <h2>Rider Market</h2>
+        <div id="marketList"></div>
+    </div>
+
+    <div id="upgrades" class="screen hidden">
+        <h2>Upgrades</h2>
+        <p>Coming soon...</p>
+    </div>
+
+    <div id="sponsors" class="screen hidden">
+        <h2>Sponsors</h2>
+        <p>Coming soon...</p>
+    </div>
+
+    <div id="race" class="screen hidden">
+        <h2>Race</h2>
+        <button onclick="runRace()">Start Race</button>
+        <div id="raceResults"></div>
+        <div id="raceRecap"></div>
+    </div>
+
+    <div id="standings" class="screen hidden">
+        <h2>Standings</h2>
+        <div id="standingsList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
