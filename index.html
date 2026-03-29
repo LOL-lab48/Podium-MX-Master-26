@@ -4,28 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Podium MX Master 26</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            padding: 20px;
-        }
-        .screen {
-            display: none;
-        }
-        .hidden {
-            display: none;
-        }
-        .screen.active {
-            display: block;
-        }
-        #teamInfo, #marketList, #standingsList, #news {
-            margin-bottom: 20px;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
+    <!-- MAIN SCREEN -->
     <div id="mainScreen" class="screen active">
         <h1>Podium MX Master 26</h1>
         <p>Welcome to the ultimate motocross manager game!</p>
@@ -35,7 +18,7 @@
         <button onclick="showScreen('standingsScreen')">Standings</button>
     </div>
 
-    <!-- Team Management Screen -->
+    <!-- TEAM SCREEN -->
     <div id="teamScreen" class="screen">
         <h2>Your Team</h2>
         <div id="teamInfo"></div>
@@ -43,7 +26,7 @@
         <button onclick="showScreen('raceScreen')">Go to Race</button>
     </div>
 
-    <!-- Market Screen -->
+    <!-- MARKET SCREEN -->
     <div id="marketScreen" class="screen">
         <h2>Market</h2>
         <div id="marketList"></div>
@@ -51,7 +34,7 @@
         <button onclick="showScreen('raceScreen')">Go to Race</button>
     </div>
 
-    <!-- Race Screen -->
+    <!-- RACE SCREEN -->
     <div id="raceScreen" class="screen">
         <h2>Race</h2>
         <button onclick="runRace()">Run Race</button>
@@ -61,18 +44,19 @@
         <button onclick="showScreen('marketScreen')">Go to Market</button>
     </div>
 
-    <!-- Standings Screen -->
+    <!-- STANDINGS SCREEN -->
     <div id="standingsScreen" class="screen">
         <h2>Standings</h2>
         <div id="standingsList"></div>
         <button onclick="showScreen('mainScreen')">Back to Main</button>
     </div>
 
+    <!-- NEWS SECTION -->
     <div id="news">
         <h3>News</h3>
         <p>Loading...</p>
     </div>
 
-    <script src="game.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
